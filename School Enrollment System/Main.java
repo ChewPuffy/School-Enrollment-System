@@ -2,6 +2,7 @@ import java.util.Scanner;
 
 public class Main implements Methods{
 static Scanner handler = new Scanner(System.in);
+TuitionComputation tc = new TuitionComputation();
 static int runningtask;
 static int EnrollmentType;
 
