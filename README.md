@@ -1,6 +1,9 @@
 contents so far:
-- CreateDB class with sample directory and .txt file creation
-
+- CreateDB class with sample directory and .txt file creation 
+- CourseUNITS class template
+- Main class template
+- Methods interface
+- TuitionComputation class template
 
 needed contents:
 - Computation class for tuition computation (irreg/reg & w/o sccholarship/alumni discount)
