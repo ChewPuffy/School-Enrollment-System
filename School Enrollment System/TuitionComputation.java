@@ -1,50 +1,56 @@
+import java.util.ArrayList;
+
 public class TuitionComputation extends CourseUNITS{
+    double BSIT = (BSITunits * 1000) + 7854;
+    double BMMA = (BMMAunits * 1000) + 7854;
+    double BSTM = (BSTMunits * 1000) + 7854;
+    double BSBA = (BSBAunits * 1000) + 7854;
     
     //REGULAR STUDENTS COMPUTATION 
-    public double BSITtuition(){
-        return BSITunits * 1000;  
+    public double getBSITtuition(){
+        return BSIT;  
     }
 
-    public double BMMAtuition(){
-        return BMMAunits * 1000;  
+    public double getBMMAtuition(){
+        return BMMA;  
     }
 
-    public double BSTMtuition(){
-        return BSTMunits * 1000; 
+    public double getBSTMtuition(){
+        return BSTM; 
     }
     
-    public double BSBAtuition(){
-        return BSBAunits * 1000;   
+    public double getBSBAtuition(){
+        return BSBA;   
     }
 
 
     //REGULAR STUDENTS COMPUTATION WITH DISCOUNT/SCHOLARSHIP
-    public double BSITtuition(double discountpercent){
+    public double getBSITtuition(double discountpercent){
         double discountdecimal = discountpercent / 100;
-        double discount = (BSITunits * 1000) * discountdecimal;
-        return (BSITunits * 1000) - discount;  
+        double discount = BSIT * discountdecimal;
+        return BSIT - discount;  
     }
 
-    public double BMMAtuition(double discountpercent){
+    public double getBMMAtuition(double discountpercent){
         double discountdecimal = discountpercent / 100;
-        double discount = (BMMAunits * 1000) * discountdecimal;
-        return (BMMAunits * 1000) - discount;  
+        double discount = BMMA * discountdecimal;
+        return BMMA - discount;  
     }
 
-    public double BSTMtuition(double discountpercent){
+    public double getBSTMtuition(double discountpercent){
         double discountdecimal = discountpercent / 100;
-        double discount = (BSTMunits * 1000) * discountdecimal;
-        return (BSTMunits * 1000) - discount; 
+        double discount = BSTM * discountdecimal;
+        return BSTM - discount; 
     }
     
-    public double BSBAtuition(double discountpercent){
+    public double getBSBAtuition(double discountpercent){
         double discountdecimal = discountpercent / 100;
-        double discount = (BSBAunits * 1000) * discountdecimal;
-        return (BSBAunits * 1000) - discount;   
+        double discount = BSBA * discountdecimal;
+        return BSBA - discount;   
     }
 
     //IRREGULAR STUDENTS COMPUTATIONS
-    public double BSITtuition(String[] subjects){
+    public double BSITtuition(ArrayList<String> subjects){
         double totalUNITS = 0;
         
         for(String subject : subjects){
@@ -70,10 +76,10 @@ public class TuitionComputation extends CourseUNITS{
             } 
         }
 
-        return totalUNITS * 1000;
+        return (totalUNITS * 1000) + 7854;
     }
 
-    public double BMMAtuition(String[] subjects){
+    public double BMMAtuition(ArrayList<String> subjects){
         double totalUNITS = 0;
 
         for(String subject : subjects){
@@ -99,10 +105,10 @@ public class TuitionComputation extends CourseUNITS{
             } 
         }
 
-        return totalUNITS * 1000;
+        return (totalUNITS * 1000) + 7854;
     }
 
-     public double BSTMtuition(String[] subjects){
+     public double BSTMtuition(ArrayList<String> subjects){
         double totalUNITS = 0;
 
         for(String subject : subjects){
@@ -128,10 +134,10 @@ public class TuitionComputation extends CourseUNITS{
             } 
         }
         
-        return totalUNITS * 1000;
+        return (totalUNITS * 1000) + 7854;
     }
 
-     public double BSBAtuition(String[] subjects){
+     public double BSBAtuition(ArrayList<String> subjects){
         double totalUNITS = 0;
 
         for(String subject : subjects){
@@ -157,6 +163,6 @@ public class TuitionComputation extends CourseUNITS{
             } 
         }
        
-        return totalUNITS * 1000;
+        return (totalUNITS * 1000) + 7854;
     }
 }
