@@ -2,10 +2,10 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 public class CourseUNITS {
-int BSITunits = 23;
-int BMMAunits = 17;
-int BSTMunits = 20;
-int BSBAunits = 17;
+double BSITunits = 23;
+double BMMAunits = 17;
+double BSTMunits = 20;
+double BSBAunits = 17;
 
 //First sem BSIT subjects
 ArrayList<String> BSITmajorSubs1stSem = new ArrayList<>(Arrays.asList(
