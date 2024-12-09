@@ -116,7 +116,9 @@ int last6digits;
                 double balance = tc.BSITtuition(subjects) - payment;
             System.out.println("Total balance: " + balance);
             System.out.println("Officially enrolled!");
-            cdb.StudentRecord(name, name, gender, birthdate, address, number, email, course, sem, guardiancontact, String.valueOf(balance));
+            cdb.StudentRecord(name, name, gender, birthdate, address, number, email, studentno, "Irregular", course, sem, guardiancontact, String.valueOf(balance));
+            spaces();
+            cdb.viewRecord(name);
         }
         //BSIT 2nd sem
         else if(course.equalsIgnoreCase("BSIT") && sem.equalsIgnoreCase("2nd")){
@@ -138,7 +140,9 @@ int last6digits;
             double balance = tc.BSITtuition(subjects) - payment;
             System.out.println("Total balance: " + balance);
             System.out.println("Officially enrolled!");
-            cdb.StudentRecord(name, name, gender, birthdate, address, number, email, course, sem, guardiancontact, String.valueOf(balance));
+            cdb.StudentRecord(name, name, gender, birthdate, address, number, email, studentno, "Irregular", course, sem, guardiancontact, String.valueOf(balance));
+            spaces();
+            cdb.viewRecord(name);
         }
         //BMMA 1st sem
         else if(course.equalsIgnoreCase("BMMA") && sem.equalsIgnoreCase("1st")){
@@ -159,7 +163,9 @@ int last6digits;
             double balance = tc.BMMAtuition(subjects) - payment;
             System.out.println("Total balance: " + balance);
             System.out.println("Officially enrolled!");
-            cdb.StudentRecord(name, name, gender, birthdate, address, number, email, course, sem, guardiancontact, String.valueOf(balance));
+            cdb.StudentRecord(name, name, gender, birthdate, address, number, email, studentno, "Irregular", course, sem, guardiancontact, String.valueOf(balance));
+            spaces();
+            cdb.viewRecord(name);
         }
         //BMMA 2nd sem
         else if(course.equalsIgnoreCase("BMMA") && sem.equalsIgnoreCase("2nd")){
@@ -180,7 +186,9 @@ int last6digits;
             double balance = tc.BMMAtuition(subjects) - payment;
             System.out.println("Total balance: " + balance);
             System.out.println("Officially enrolled!");
-            cdb.StudentRecord(name, name, gender, birthdate, address, number, email, course, sem, guardiancontact, String.valueOf(balance));
+            cdb.StudentRecord(name, name, gender, birthdate, address, number, email, studentno, "Irregular", course, sem, guardiancontact, String.valueOf(balance));
+            spaces();
+            cdb.viewRecord(name);
         }
         //BSTM 1st sem
         else if(course.equalsIgnoreCase("BSTM") && sem.equalsIgnoreCase("1st")){
@@ -202,7 +210,9 @@ int last6digits;
             double balance = tc.BSTMtuition(subjects) - payment;
             System.out.println("Total balance: " + balance);
             System.out.println("Officially enrolled!");
-            cdb.StudentRecord(name, name, gender, birthdate, address, number, email, course, sem, guardiancontact, String.valueOf(balance));
+            cdb.StudentRecord(name, name, gender, birthdate, address, number, email, studentno, "Irregular", course, sem, guardiancontact, String.valueOf(balance));
+            spaces();
+            cdb.viewRecord(name);
         }
         //BSTM 2nd sem
         else if(course.equalsIgnoreCase("BSTM") && sem.equalsIgnoreCase("2nd")){
@@ -223,7 +233,9 @@ int last6digits;
             double balance = tc.BSTMtuition(subjects) - payment;
             System.out.println("Total balance: " + balance);
             System.out.println("Officially enrolled!");
-            cdb.StudentRecord(name, name, gender, birthdate, address, number, email, course, sem, guardiancontact, String.valueOf(balance));
+            cdb.StudentRecord(name, name, gender, birthdate, address, number, email, studentno, "Irregular", course, sem, guardiancontact, String.valueOf(balance));
+            spaces();
+            cdb.viewRecord(name);
         }
         //BSBA 1st sem
         else if(course.equalsIgnoreCase("BSBA") && sem.equalsIgnoreCase("1st")){
@@ -244,7 +256,9 @@ int last6digits;
             double balance = tc.BSBAtuition(subjects) - payment;
             System.out.println("Total balance: " + balance);
             System.out.println("Officially enrolled!");
-            cdb.StudentRecord(name, name, gender, birthdate, address, number, email, course, sem, guardiancontact, String.valueOf(balance));
+            cdb.StudentRecord(name, name, gender, birthdate, address, number, email, studentno, "Irregular", course, sem, guardiancontact, String.valueOf(balance));
+            spaces();
+            cdb.viewRecord(name);
         }
         //BSBA 2nd sem
         else if(course.equalsIgnoreCase("BSBA") && sem.equalsIgnoreCase("2nd")){
@@ -266,7 +280,9 @@ int last6digits;
             double balance = tc.BSBAtuition(subjects) - payment;
             System.out.println("Total balance: " + balance);
             System.out.println("Officially enrolled!");
-            cdb.StudentRecord(name, name, gender, birthdate, address, number, email, course, sem, guardiancontact, String.valueOf(balance));
+            cdb.StudentRecord(name, name, gender, birthdate, address, number, email, studentno, "Irregular", course, sem, guardiancontact, String.valueOf(balance));
+            spaces();
+            cdb.viewRecord(name);
         }
         
         
@@ -325,7 +341,9 @@ int last6digits;
                     double balance = tc.getBSITtuition() - payment;
                     System.out.println("Total balance: " + balance);
                     System.out.println("Officially enrolled!");
-                    cdb.StudentRecord(name, name, gender, birthdate, address, number, email, course, sem, guardiancontact, String.valueOf(balance));
+                    cdb.StudentRecord(name, name, gender, birthdate, address, number, email, studentno, course, sem, guardiancontact, String.valueOf(balance));
+                    spaces();
+                    cdb.viewRecord(name);
                 }
                 else {
                     System.out.print("Amount paid: ");
@@ -333,7 +351,9 @@ int last6digits;
                     double balance = tc.getBSITtuition(discount) - payment;
                     System.out.println("Total balance: " + balance);
                     System.out.println("Officially enrolled!");
-                    cdb.StudentRecord(name, name, gender, birthdate, address, number, email, course, sem, guardiancontact, String.valueOf(balance));      
+                    cdb.StudentRecord(name, name, gender, birthdate, address, number, email, studentno, course, sem, guardiancontact, String.valueOf(balance));   
+                    spaces();
+                    cdb.viewRecord(name);   
                 }
         }
         //BSIT 2nd sem
@@ -348,7 +368,9 @@ int last6digits;
                     double balance = tc.getBSITtuition() - payment;
                     System.out.println("Total balance: " + balance);
                     System.out.println("Officially enrolled!");
-                    cdb.StudentRecord(name, name, gender, birthdate, address, number, email, course, sem, guardiancontact, String.valueOf(balance));
+                    cdb.StudentRecord(name, name, gender, birthdate, address, number, email, studentno, course, sem, guardiancontact, String.valueOf(balance));
+                    spaces();
+                    cdb.viewRecord(name);
                 }
                 else {
                     System.out.print("Amount paid: ");
@@ -356,7 +378,9 @@ int last6digits;
                     double balance = tc.getBSITtuition(discount) - payment;
                     System.out.println("Total balance: " + balance);
                     System.out.println("Officially enrolled!");
-                    cdb.StudentRecord(name, name, gender, birthdate, address, number, email, course, sem, guardiancontact, String.valueOf(balance));        
+                    cdb.StudentRecord(name, name, gender, birthdate, address, number, email, studentno, course, sem, guardiancontact, String.valueOf(balance));
+                    spaces();
+                    cdb.viewRecord(name);        
                 }
         }
         //BMMA 1st sem
@@ -371,7 +395,9 @@ int last6digits;
                     double balance = tc.getBMMAtuition() - payment;
                     System.out.println("Total balance: " + balance);
                     System.out.println("Officially enrolled!");
-                    cdb.StudentRecord(name, name, gender, birthdate, address, number, email, course, sem, guardiancontact, String.valueOf(balance));
+                    cdb.StudentRecord(name, name, gender, birthdate, address, number, email, studentno, course, sem, guardiancontact, String.valueOf(balance));
+                    spaces();
+                    cdb.viewRecord(name);
                 }
                 else {
                     System.out.print("Amount paid: ");
@@ -379,7 +405,9 @@ int last6digits;
                     double balance = tc.getBMMAtuition(discount) - payment;
                     System.out.println("Total balance: " + balance);
                     System.out.println("Officially enrolled!");
-                    cdb.StudentRecord(name, name, gender, birthdate, address, number, email, course, sem, guardiancontact, String.valueOf(balance));          
+                    cdb.StudentRecord(name, name, gender, birthdate, address, number, email, studentno, course, sem, guardiancontact, String.valueOf(balance)); 
+                    spaces();
+                    cdb.viewRecord(name);         
                 }
         }
         //BMMA 2nd sem
@@ -394,7 +422,9 @@ int last6digits;
                     double balance = tc.getBMMAtuition() - payment;
                     System.out.println("Total balance: " + balance);
                     System.out.println("Officially enrolled!");
-                    cdb.StudentRecord(name, name, gender, birthdate, address, number, email, course, sem, guardiancontact, String.valueOf(balance));
+                    cdb.StudentRecord(name, name, gender, birthdate, address, number, email, studentno, course, sem, guardiancontact, String.valueOf(balance));
+                    spaces();
+                    cdb.viewRecord(name);
                 }
                 else {
                     System.out.print("Amount paid: ");
@@ -402,7 +432,9 @@ int last6digits;
                     double balance = tc.getBMMAtuition(discount) - payment;
                     System.out.println("Total balance: " + balance);
                     System.out.println("Officially enrolled!");
-                    cdb.StudentRecord(name, name, gender, birthdate, address, number, email, course, sem, guardiancontact, String.valueOf(balance));     
+                    cdb.StudentRecord(name, name, gender, birthdate, address, number, email, studentno, course, sem, guardiancontact, String.valueOf(balance)); 
+                    spaces();
+                    cdb.viewRecord(name);    
                 }
         }
         //BSTM 1st sem
@@ -417,7 +449,9 @@ int last6digits;
                     double balance = tc.getBSTMtuition() - payment;
                     System.out.println("Total balance: " + balance);
                     System.out.println("Officially enrolled!");
-                    cdb.StudentRecord(name, name, gender, birthdate, address, number, email, course, sem, guardiancontact, String.valueOf(balance));
+                    cdb.StudentRecord(name, name, gender, birthdate, address, number, email, studentno, course, sem, guardiancontact, String.valueOf(balance));
+                    spaces();
+                    cdb.viewRecord(name);
                 }
                 else {
                     System.out.print("Amount paid: ");
@@ -425,7 +459,9 @@ int last6digits;
                     double balance = tc.getBSTMtuition(discount) - payment;
                     System.out.println("Total balance: " + balance);
                     System.out.println("Officially enrolled!");
-                    cdb.StudentRecord(name, name, gender, birthdate, address, number, email, course, sem, guardiancontact, String.valueOf(balance));
+                    cdb.StudentRecord(name, name, gender, birthdate, address, number, email, studentno, course, sem, guardiancontact, String.valueOf(balance));
+                    spaces();
+                    cdb.viewRecord(name);
                 }
         }
         //BSTM 2nd sem
@@ -440,7 +476,9 @@ int last6digits;
                     double balance = tc.getBSTMtuition() - payment;
                     System.out.println("Total balance: " + balance);
                     System.out.println("Officially enrolled!");
-                    cdb.StudentRecord(name, name, gender, birthdate, address, number, email, course, sem, guardiancontact, String.valueOf(balance));
+                    cdb.StudentRecord(name, name, gender, birthdate, address, number, email, studentno, course, sem, guardiancontact, String.valueOf(balance));
+                    spaces();
+                    cdb.viewRecord(name);
                 }
                 else {
                     System.out.print("Amount paid: ");
@@ -448,7 +486,9 @@ int last6digits;
                     double balance = tc.getBSTMtuition(discount) - payment;
                     System.out.println("Total balance: " + balance);
                     System.out.println("Officially enrolled!");
-                    cdb.StudentRecord(name, name, gender, birthdate, address, number, email, course, sem, guardiancontact, String.valueOf(balance));      
+                    cdb.StudentRecord(name, name, gender, birthdate, address, number, email, studentno, course, sem, guardiancontact, String.valueOf(balance));  
+                    spaces();
+                    cdb.viewRecord(name);    
                 }
         }
         //BSBA 1st sem
@@ -463,7 +503,9 @@ int last6digits;
                     double balance = tc.getBSBAtuition() - payment;
                     System.out.println("Total balance: " + balance);
                     System.out.println("Officially enrolled!");
-                    cdb.StudentRecord(name, name, gender, birthdate, address, number, email, course, sem, guardiancontact, String.valueOf(balance));
+                    cdb.StudentRecord(name, name, gender, birthdate, address, number, email, studentno, course, sem, guardiancontact, String.valueOf(balance));
+                    spaces();
+                    cdb.viewRecord(name);
                 }
                 else {
                     System.out.print("Amount paid: ");
@@ -471,7 +513,9 @@ int last6digits;
                     double balance = tc.getBSBAtuition() - payment;
                     System.out.println("Total balance: " + balance);
                     System.out.println("Officially enrolled!");
-                    cdb.StudentRecord(name, name, gender, birthdate, address, number, email, course, sem, guardiancontact, String.valueOf(balance));
+                    cdb.StudentRecord(name, name, gender, birthdate, address, number, email, studentno, course, sem, guardiancontact, String.valueOf(balance));
+                    spaces();
+                    cdb.viewRecord(name);
                 }
         }
         //BSBA 2nd sem
@@ -486,7 +530,9 @@ int last6digits;
                     double balance = tc.getBSBAtuition() - payment;
                     System.out.println("Total balance: " + balance);
                     System.out.println("Officially enrolled!");
-                    cdb.StudentRecord(name, name, gender, birthdate, address, number, email, course, sem, guardiancontact, String.valueOf(balance));
+                    cdb.StudentRecord(name, name, gender, birthdate, address, number, email, studentno, course, sem, guardiancontact, String.valueOf(balance));
+                    spaces();
+                    cdb.viewRecord(name);
                 }
                 else {
                     System.out.print("Amount paid: ");
@@ -494,7 +540,9 @@ int last6digits;
                     double balance = tc.getBSBAtuition(discount) - payment;
                     System.out.println("Total balance: " + balance);
                     System.out.println("Officially enrolled!");
-                    cdb.StudentRecord(name, name, gender, birthdate, address, number, email, course, sem, guardiancontact, String.valueOf(balance));
+                    cdb.StudentRecord(name, name, gender, birthdate, address, number, email, studentno, course, sem, guardiancontact, String.valueOf(balance));
+                    spaces();
+                    cdb.viewRecord(name);
                 }
         }
         }else {
@@ -505,10 +553,13 @@ int last6digits;
     
     public void UpdateStudentRecord(){
         Scanner handler = new Scanner(System.in);
+      
         System.out.print("Enter student name (ex: John Doe): ");
         String input = handler.nextLine();
-        System.out.print("[1] Update balance [2] Delete Record\n: ");
+        if(cdb.recordChecker(input)==1){
+        System.out.print("[1] Update balance [2] Delete Record:\n ");
         int choice = handler.nextInt();
+        handler.nextLine();
         if(choice==1){
         System.out.print("Enter the amount paid: ");
         double payment = handler.nextDouble();   
@@ -527,6 +578,9 @@ int last6digits;
         } else {
             System.out.println("Invalid input");
         }
+        } else{
+            //file does not exist
+        } 
     }
 
     public void spaces(){
