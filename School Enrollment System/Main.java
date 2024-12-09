@@ -118,7 +118,7 @@ int last6digits;
             System.out.println("Officially enrolled!");
             cdb.StudentRecord(name, name, gender, birthdate, address, number, email, studentno, "Irregular", course, sem, guardiancontact, String.valueOf(balance));
             spaces();
-            cdb.viewRecord(name);
+            cdb.viewRecordIrreg(name);
         }
         //BSIT 2nd sem
         else if(course.equalsIgnoreCase("BSIT") && sem.equalsIgnoreCase("2nd")){
@@ -142,7 +142,7 @@ int last6digits;
             System.out.println("Officially enrolled!");
             cdb.StudentRecord(name, name, gender, birthdate, address, number, email, studentno, "Irregular", course, sem, guardiancontact, String.valueOf(balance));
             spaces();
-            cdb.viewRecord(name);
+            cdb.viewRecordIrreg(name);
         }
         //BMMA 1st sem
         else if(course.equalsIgnoreCase("BMMA") && sem.equalsIgnoreCase("1st")){
@@ -165,7 +165,7 @@ int last6digits;
             System.out.println("Officially enrolled!");
             cdb.StudentRecord(name, name, gender, birthdate, address, number, email, studentno, "Irregular", course, sem, guardiancontact, String.valueOf(balance));
             spaces();
-            cdb.viewRecord(name);
+            cdb.viewRecordIrreg(name);
         }
         //BMMA 2nd sem
         else if(course.equalsIgnoreCase("BMMA") && sem.equalsIgnoreCase("2nd")){
@@ -188,7 +188,7 @@ int last6digits;
             System.out.println("Officially enrolled!");
             cdb.StudentRecord(name, name, gender, birthdate, address, number, email, studentno, "Irregular", course, sem, guardiancontact, String.valueOf(balance));
             spaces();
-            cdb.viewRecord(name);
+            cdb.viewRecordIrreg(name);
         }
         //BSTM 1st sem
         else if(course.equalsIgnoreCase("BSTM") && sem.equalsIgnoreCase("1st")){
@@ -212,7 +212,7 @@ int last6digits;
             System.out.println("Officially enrolled!");
             cdb.StudentRecord(name, name, gender, birthdate, address, number, email, studentno, "Irregular", course, sem, guardiancontact, String.valueOf(balance));
             spaces();
-            cdb.viewRecord(name);
+            cdb.viewRecordIrreg(name);
         }
         //BSTM 2nd sem
         else if(course.equalsIgnoreCase("BSTM") && sem.equalsIgnoreCase("2nd")){
@@ -235,7 +235,7 @@ int last6digits;
             System.out.println("Officially enrolled!");
             cdb.StudentRecord(name, name, gender, birthdate, address, number, email, studentno, "Irregular", course, sem, guardiancontact, String.valueOf(balance));
             spaces();
-            cdb.viewRecord(name);
+            cdb.viewRecordIrreg(name);
         }
         //BSBA 1st sem
         else if(course.equalsIgnoreCase("BSBA") && sem.equalsIgnoreCase("1st")){
@@ -258,7 +258,7 @@ int last6digits;
             System.out.println("Officially enrolled!");
             cdb.StudentRecord(name, name, gender, birthdate, address, number, email, studentno, "Irregular", course, sem, guardiancontact, String.valueOf(balance));
             spaces();
-            cdb.viewRecord(name);
+            cdb.viewRecordIrreg(name);
         }
         //BSBA 2nd sem
         else if(course.equalsIgnoreCase("BSBA") && sem.equalsIgnoreCase("2nd")){
@@ -282,7 +282,7 @@ int last6digits;
             System.out.println("Officially enrolled!");
             cdb.StudentRecord(name, name, gender, birthdate, address, number, email, studentno, "Irregular", course, sem, guardiancontact, String.valueOf(balance));
             spaces();
-            cdb.viewRecord(name);
+            cdb.viewRecordIrreg(name);
         }
         
         
