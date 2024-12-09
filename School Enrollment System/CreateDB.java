@@ -1,5 +1,7 @@
 import java.io.IOException;
 import java.nio.file.*;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 public class CreateDB{
 Path directoryPath = Path.of("C:\\StudentsDB");
@@ -38,7 +40,8 @@ Path createFile;
             Files.writeString(createFile, Birthdate + System.lineSeparator(), StandardOpenOption.APPEND);    
             Files.writeString(createFile, address + System.lineSeparator(), StandardOpenOption.APPEND);    
             Files.writeString(createFile, number + System.lineSeparator(), StandardOpenOption.APPEND);    
-            Files.writeString(createFile, email + System.lineSeparator(), StandardOpenOption.APPEND);    
+            Files.writeString(createFile, email + System.lineSeparator(), StandardOpenOption.APPEND);
+            Files.writeString(createFile, course + System.lineSeparator(), StandardOpenOption.APPEND);    
             Files.writeString(createFile, "2nd" + System.lineSeparator(), StandardOpenOption.APPEND);    
             Files.writeString(createFile, sem + System.lineSeparator(), StandardOpenOption.APPEND);    
             Files.writeString(createFile, guardiancontact + System.lineSeparator(), StandardOpenOption.APPEND);    
@@ -48,7 +51,7 @@ Path createFile;
         }
     }
 
-     public void updateBalance(String filename, double amountToSubtract) {
+    public void updateBalance(String filename, double amountToSubtract) {
         try {
             createFile = directoryPath.resolve(filename + ".txt");
 
@@ -79,6 +82,46 @@ Path createFile;
             }
         } catch (IOException e) {
             e.printStackTrace();
+        }
+    }
+
+
+    public void deleteRecord(String filename) {
+        
+            Path filePath = directoryPath.resolve(filename + ".txt");
+
+            if (Files.exists(filePath)) {
+                try {
+            // Delete the file if it exists
+            Files.delete(filePath);
+            System.out.println("File deleted: " + filePath);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+            } else {
+                System.out.println("File does not exist.");
+            }
+        
+    }
+
+    public void viewRecord(String filename){
+        Path filePath = directoryPath.resolve(filename + ".txt");
+        try {
+            // Read all lines from the file
+            List<String> lines = Files.readAllLines(filePath);
+            ArrayList<String> elements = new ArrayList<>(Arrays.asList("Name: ","Gender: ","Birthdate: ","Address: ","Number: ","Email: ","Course: ","Term: ","Semester: ","Guardian Contact: ","Balance: "));
+            // Display each line 
+            for (int i = 0; i < lines.size(); i++) {
+                if (i < elements.size()) {
+                    // Print the label and the corresponding line
+                    System.out.println(elements.get(i) + lines.get(i));
+                } else {
+                    // Extra lines without a label
+                    System.out.println("Unknown: " + lines.get(i));
+                }
+            }
+        } catch (IOException e) {
+            System.err.println("Error reading the file: " + e.getMessage());
         }
     }
 }

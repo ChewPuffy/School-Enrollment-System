@@ -32,7 +32,7 @@ int last6digits;
         System.out.println("[===================================================]"); 
         System.out.println("[                 Enrollment System                 ]");
         System.out.println("[===================================================]");
-        System.out.print("Please choose a student record management action:\n[1] Enrollment\n[2] Update Student's Record\n[3] Exit program\n\nEnter your choice (1 / 2 / 3):");
+        System.out.print("Please choose a student record management action:\n[1] Enrollment\n[2] Update Student's Record\n[3] View Student Record\n[4] Exit program\n\nEnter your choice (1 / 2 / 3):");
         runningtask=handler.nextInt();
         switch (runningtask) {
             case 1:
@@ -41,16 +41,26 @@ int last6digits;
             case 2:
                 UpdateStudentRecord();
                 break;
-             case 3:
+            case 3:
+                ViewStudentRecord();
+                break;
+            case 4:
                 System.out.println("Program finished");
                 break;
             default:
-                throw new AssertionError();
+                System.out.println("Invalid input");
         }
 
     }
 
- 
+    public void ViewStudentRecord(){
+        Scanner handler = new Scanner(System.in);
+        spaces();
+        System.out.print("Enter student name (ex: John Doe): ");
+        String input = handler.nextLine();
+        System.out.println("====Student Info====");
+        cdb.viewRecord(input);
+    }
 
     public void Irreg(){
         Scanner handler = new Scanner(System.in);
@@ -74,7 +84,7 @@ int last6digits;
         System.out.print("Contact Number: ");
             number=handler.nextLine();
         
-        System.out.println(email+"\nProgram/Course:\nAvailable courses:\nBachelor of Science in Information Technology (BSIT)\nBachelor of Science in Business Administration (BSBA)\nBachelor of Science in Tourism Management (BSTM)\nBachelor of Multimedia Arts (BMMA)");
+        System.out.println("Email: " +email+"\nProgram/Course:\nAvailable courses:\nBachelor of Science in Information Technology (BSIT)\nBachelor of Science in Business Administration (BSBA)\nBachelor of Science in Tourism Management (BSTM)\nBachelor of Multimedia Arts (BMMA)");
         System.out.print("Enter the course name (ex: BSIT): ");
             course=handler.nextLine();
         
@@ -264,13 +274,14 @@ int last6digits;
 
     public void Enrollment(){
         Scanner handler = new Scanner(System.in);
+        spaces();
         System.out.println("[==== New Enrollee ====]\n");
-        System.out.print("Irregular Student? (Yes/No): ");
+        System.out.print("Irregular Student? (Y/N): ");
         String choice = handler.nextLine();
-        if(choice.equalsIgnoreCase("yes")){
+        if(choice.equalsIgnoreCase("y")){
             Irreg();
         } 
-        else if(choice.equalsIgnoreCase("no")){
+        else if(choice.equalsIgnoreCase("n")){
             last6digits = 100000 + random.nextInt(900000);
             studentno = "02000" + String.valueOf(last6digits);
             System.out.print("Please enter the details:\nFull Name: ");
@@ -290,7 +301,7 @@ int last6digits;
         System.out.print("Contact Number: ");
             number=handler.nextLine();
         
-        System.out.println(email+"\nProgram/Course:\nAvailable courses:\nBachelor of Science in Information Technology (BSIT)\nBachelor of Science in Business Administration (BSBA)\nBachelor of Science in Tourism Management (BSTM)\nBachelor of Multimedia Arts (BMMA)");
+        System.out.println("Email: " +email+"\nProgram/Course:\nAvailable courses:\nBachelor of Science in Information Technology (BSIT)\nBachelor of Science in Business Administration (BSBA)\nBachelor of Science in Tourism Management (BSTM)\nBachelor of Multimedia Arts (BMMA)");
         System.out.print("Enter the course name (ex: BSIT): ");
             course=handler.nextLine();
         
@@ -486,6 +497,8 @@ int last6digits;
                     cdb.StudentRecord(name, name, gender, birthdate, address, number, email, course, sem, guardiancontact, String.valueOf(balance));
                 }
         }
+        }else {
+            System.out.println("Invalid input");
         }
     }
 
@@ -494,10 +507,29 @@ int last6digits;
         Scanner handler = new Scanner(System.in);
         System.out.print("Enter student name (ex: John Doe): ");
         String input = handler.nextLine();
+        System.out.print("[1] Update balance [2] Delete Record\n: ");
+        int choice = handler.nextInt();
+        if(choice==1){
         System.out.print("Enter the amount paid: ");
-        double payment = handler.nextDouble();
+        double payment = handler.nextDouble();   
         cdb.updateBalance(input, payment);
+        }
+        else if(choice==2){
+        System.out.print("Delete file? (Y/N): ");   
+            String yn = handler.nextLine();
+            if(yn.equalsIgnoreCase("y")){
+                cdb.deleteRecord(input);
+            } else if(yn.equalsIgnoreCase("n")){
+                System.out.println("File deletion cancelled");
+            } else {
+                System.out.println("Invalid input");
+            }
+        } else {
+            System.out.println("Invalid input");
+        }
     }
 
-
+    public void spaces(){
+        System.out.println("\n\n\n\n\n\n");
+    }
 }
