@@ -24,7 +24,7 @@ Path createFile;
         }
     }
     
-    public void StudentRecord(String filename, String name, String gender, String Birthdate, String address, String number, String email, String course, String sem, String guardiancontact, String balance){
+    public void StudentRecord(String filename, String name, String gender, String Birthdate, String address, String number, String email, String studentnum, String course, String sem, String guardiancontact, String balance){
         try {
             createFile = directoryPath.resolve(filename +".txt");
 
@@ -41,6 +41,37 @@ Path createFile;
             Files.writeString(createFile, address + System.lineSeparator(), StandardOpenOption.APPEND);    
             Files.writeString(createFile, number + System.lineSeparator(), StandardOpenOption.APPEND);    
             Files.writeString(createFile, email + System.lineSeparator(), StandardOpenOption.APPEND);
+            Files.writeString(createFile, studentnum + System.lineSeparator(), StandardOpenOption.APPEND);
+            Files.writeString(createFile, course + System.lineSeparator(), StandardOpenOption.APPEND);    
+            Files.writeString(createFile, "2nd" + System.lineSeparator(), StandardOpenOption.APPEND);    
+            Files.writeString(createFile, sem + System.lineSeparator(), StandardOpenOption.APPEND);    
+            Files.writeString(createFile, guardiancontact + System.lineSeparator(), StandardOpenOption.APPEND);    
+            Files.writeString(createFile, balance + System.lineSeparator(), StandardOpenOption.APPEND); 
+        } catch (Exception e) {
+              e.printStackTrace();
+        }
+    }
+
+
+     public void StudentRecord(String filename, String name, String gender, String Birthdate, String address, String number, String email, String studentnum, String studenttype, String course, String sem, String guardiancontact, String balance){
+        try {
+            createFile = directoryPath.resolve(filename +".txt");
+
+              if (!Files.exists(createFile)) {
+                    Files.createFile(createFile);
+                    System.out.println("File created: " + createFile);
+                } else {
+                    System.out.println("File already exists: " + createFile);
+                }
+             // Write strings to the file
+            Files.writeString(createFile, name + System.lineSeparator(), StandardOpenOption.APPEND);
+            Files.writeString(createFile, gender + System.lineSeparator(), StandardOpenOption.APPEND);
+            Files.writeString(createFile, Birthdate + System.lineSeparator(), StandardOpenOption.APPEND);    
+            Files.writeString(createFile, address + System.lineSeparator(), StandardOpenOption.APPEND);    
+            Files.writeString(createFile, number + System.lineSeparator(), StandardOpenOption.APPEND);    
+            Files.writeString(createFile, email + System.lineSeparator(), StandardOpenOption.APPEND);
+            Files.writeString(createFile, studentnum + System.lineSeparator(), StandardOpenOption.APPEND);
+            Files.writeString(createFile, studenttype + System.lineSeparator(), StandardOpenOption.APPEND);
             Files.writeString(createFile, course + System.lineSeparator(), StandardOpenOption.APPEND);    
             Files.writeString(createFile, "2nd" + System.lineSeparator(), StandardOpenOption.APPEND);    
             Files.writeString(createFile, sem + System.lineSeparator(), StandardOpenOption.APPEND);    
@@ -85,21 +116,37 @@ Path createFile;
         }
     }
 
+    public int recordChecker(String filename){
+        int result;
+         Path filePath = directoryPath.resolve(filename + ".txt");
 
+            if (Files.exists(filePath)) {
+                result=1;
+            }
+            else {
+                System.out.println("File does not exist.");
+                result=0;
+            }
+        return result;
+    }
+    
     public void deleteRecord(String filename) {
-        
+      
             Path filePath = directoryPath.resolve(filename + ".txt");
 
             if (Files.exists(filePath)) {
+                
                 try {
             // Delete the file if it exists
             Files.delete(filePath);
             System.out.println("File deleted: " + filePath);
+
         } catch (IOException e) {
             e.printStackTrace();
         }
             } else {
                 System.out.println("File does not exist.");
+                
             }
         
     }
@@ -109,7 +156,7 @@ Path createFile;
         try {
             // Read all lines from the file
             List<String> lines = Files.readAllLines(filePath);
-            ArrayList<String> elements = new ArrayList<>(Arrays.asList("Name: ","Gender: ","Birthdate: ","Address: ","Number: ","Email: ","Course: ","Term: ","Semester: ","Guardian Contact: ","Balance: "));
+            ArrayList<String> elements = new ArrayList<>(Arrays.asList("Name: ","Gender: ","Birthdate: ","Address: ","Number: ","Email: ","Student Number: ","Course: ","Term: ","Semester: ","Guardian Contact: ","Balance: "));
             // Display each line 
             for (int i = 0; i < lines.size(); i++) {
                 if (i < elements.size()) {
