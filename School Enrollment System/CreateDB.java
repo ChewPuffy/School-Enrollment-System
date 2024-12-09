@@ -171,4 +171,25 @@ Path createFile;
             System.err.println("Error reading the file: " + e.getMessage());
         }
     }
+
+    public void viewRecordIrreg(String filename){
+        Path filePath = directoryPath.resolve(filename + ".txt");
+        try {
+            // Read all lines from the file
+            List<String> lines = Files.readAllLines(filePath);
+            ArrayList<String> elements = new ArrayList<>(Arrays.asList("Name: ","Gender: ","Birthdate: ","Address: ","Number: ","Email: ","Student Number: ","Student Type: ","Course: ","Term: ","Semester: ","Guardian Contact: ","Balance: "));
+            // Display each line 
+            for (int i = 0; i < lines.size(); i++) {
+                if (i < elements.size()) {
+                    // Print the label and the corresponding line
+                    System.out.println(elements.get(i) + lines.get(i));
+                } else {
+                    // Extra lines without a label
+                    System.out.println("Unknown: " + lines.get(i));
+                }
+            }
+        } catch (IOException e) {
+            System.err.println("Error reading the file: " + e.getMessage());
+        }
+    }
 }
