@@ -2,7 +2,14 @@ import java.util.ArrayList;
 import java.util.Random;
 import java.util.Scanner;
 public class Main implements Methods{
-
+/*
+MEMBERS
+- Yumul, Lattrelle
+- Quiroz, Aian Stephen
+- Gonzales, Terence
+- Burgos, Joyce
+- Yalung, Miguel
+*/
 TuitionComputation tc = new TuitionComputation();
 CourseUNITS cu = new CourseUNITS();
 CreateDB cdb = new CreateDB();
