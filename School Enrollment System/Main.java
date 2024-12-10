@@ -97,7 +97,14 @@ int last6digits;
 
         //BSIT 1st sem
         if(course.equalsIgnoreCase("BSIT") && sem.equalsIgnoreCase("1st")){
-            System.out.println("Available subjects:\n"+ cu.BSITmajorSubs1stSem + "\n" + cu.BSITminorSubs1stSem);
+           
+            System.out.println("[Available Subjects]");
+            for (String element : cu.BSITmajorSubs1stSem) {
+                System.out.println(element);
+            }
+            for (String element : cu.BSITminorSubs1stSem) {
+                System.out.println(element);
+            }
             System.out.print("Enter the subjects (enter done if all subjects have been listed): ");
             ArrayList<String> subjects = new ArrayList<>();
             String input=handler.nextLine();
@@ -122,7 +129,14 @@ int last6digits;
         }
         //BSIT 2nd sem
         else if(course.equalsIgnoreCase("BSIT") && sem.equalsIgnoreCase("2nd")){
-            System.out.println("Available subjects:\n"+ cu.BSITmajorSubs2ndSem + "\n" + cu.BSITminorSubs2ndSem);
+           
+            System.out.println("[Available Subjects]");
+            for (String element : cu.BSITmajorSubs2ndSem) {
+                System.out.println(element);
+            }
+            for (String element : cu.BSITminorSubs2ndSem) {
+                System.out.println(element);
+            }
             System.out.print("Enter the subjects (enter done if all subjects have been listed): ");
             ArrayList<String> subjects = new ArrayList<>();
             String input=handler.nextLine();
@@ -146,7 +160,14 @@ int last6digits;
         }
         //BMMA 1st sem
         else if(course.equalsIgnoreCase("BMMA") && sem.equalsIgnoreCase("1st")){
-            System.out.println("Available subjects:\n"+ cu.BMMAmajorSubs1stSem + "\n" + cu.BMMAminorSubs1stSem);
+            
+            System.out.println("[Available Subjects]");
+            for (String element : cu.BMMAmajorSubs1stSem) {
+                System.out.println(element);
+            }
+            for (String element : cu.BMMAminorSubs1stSem) {
+                System.out.println(element);
+            }
             System.out.print("Enter the subjects (enter done if all subjects have been listed): ");
             ArrayList<String> subjects = new ArrayList<>();
             String input=handler.nextLine();
@@ -169,7 +190,14 @@ int last6digits;
         }
         //BMMA 2nd sem
         else if(course.equalsIgnoreCase("BMMA") && sem.equalsIgnoreCase("2nd")){
-            System.out.println("Available subjects:\n"+ cu.BMMAmajorSubs2ndSem + "\n" + cu.BMMAminorSubs2ndSem);
+            
+            System.out.println("[Available Subjects]");
+            for (String element : cu.BMMAmajorSubs2ndSem) {
+                System.out.println(element);
+            }
+            for (String element : cu.BMMAminorSubs2ndSem) {
+                System.out.println(element);
+            }
             System.out.print("Enter the subjects (enter done if all subjects have been listed): ");
             ArrayList<String> subjects = new ArrayList<>();
             String input=handler.nextLine();
@@ -192,8 +220,15 @@ int last6digits;
         }
         //BSTM 1st sem
         else if(course.equalsIgnoreCase("BSTM") && sem.equalsIgnoreCase("1st")){
-            System.out.println("Available subjects:\n"+ cu.BSTMmajorSubs1stSem + "\n" + cu.BSTMminorSubs1stSem);
-           System.out.print("Enter the subjects (enter done if all subjects have been listed): ");
+           
+            System.out.println("[Available Subjects]");
+            for (String element : cu.BSTMmajorSubs1stSem) {
+                System.out.println(element);
+            }
+            for (String element : cu.BSTMminorSubs1stSem) {
+                System.out.println(element);
+            }
+            System.out.print("Enter the subjects (enter done if all subjects have been listed): ");
             ArrayList<String> subjects = new ArrayList<>();
             String input=handler.nextLine();
             subjects.add(input);
@@ -216,8 +251,15 @@ int last6digits;
         }
         //BSTM 2nd sem
         else if(course.equalsIgnoreCase("BSTM") && sem.equalsIgnoreCase("2nd")){
-            System.out.println("Available subjects:\n"+ cu.BSTMmajorSubs2ndSem + "\n" + cu.BSTMminorSubs2ndSem);
-           System.out.print("Enter the subjects (enter done if all subjects have been listed): ");
+           
+            System.out.println("[Available Subjects]");
+            for (String element : cu.BSTMmajorSubs2ndSem) {
+                System.out.println(element);
+            }
+            for (String element : cu.BSTMminorSubs2ndSem) {
+                System.out.println(element);
+            }
+            System.out.print("Enter the subjects (enter done if all subjects have been listed): ");
             ArrayList<String> subjects = new ArrayList<>();
             String input=handler.nextLine();
             subjects.add(input);
@@ -239,8 +281,14 @@ int last6digits;
         }
         //BSBA 1st sem
         else if(course.equalsIgnoreCase("BSBA") && sem.equalsIgnoreCase("1st")){
-            System.out.println("Available subjects:\n"+ cu.BSBAmajorSubs1stSem + "\n" + cu.BSBAminorSubs1stSem);
-           System.out.print("Enter the subjects (enter done if all subjects have been listed): ");
+            System.out.println("[Available Subjects]");
+            for (String element : cu.BSBAmajorSubs1stSem) {
+                System.out.println(element);
+            }
+            for (String element : cu.BSBAminorSubs1stSem) {
+                System.out.println(element);
+            }
+            System.out.print("Enter the subjects (enter done if all subjects have been listed): ");
             ArrayList<String> subjects = new ArrayList<>();
             String input=handler.nextLine();
             subjects.add(input);
@@ -262,7 +310,13 @@ int last6digits;
         }
         //BSBA 2nd sem
         else if(course.equalsIgnoreCase("BSBA") && sem.equalsIgnoreCase("2nd")){
-            System.out.println("Available subjects:\n"+ cu.BSBAmajorSubs2ndSem + "\n" + cu.BSBAminorSubs2ndSem);
+            System.out.println("[Available Subjects]");
+            for (String element : cu.BSBAmajorSubs2ndSem) {
+                System.out.println(element);
+            }
+            for (String element : cu.BSBAminorSubs2ndSem) {
+                System.out.println(element);
+            }
             System.out.print("Enter the subjects (enter done if all subjects have been listed): ");
             ArrayList<String> subjects = new ArrayList<>();
             String input=handler.nextLine();
@@ -331,7 +385,13 @@ int last6digits;
 
         //BSIT 1st sem
         if(course.equalsIgnoreCase("BSIT") && sem.equalsIgnoreCase("1st")){
-            System.out.println("Subjects:\n"+ cu.BSITmajorSubs1stSem + "\n" + cu.BSITminorSubs1stSem);
+            System.out.println("[Subjects]");
+            for (String element : cu.BSITmajorSubs1stSem) {
+                System.out.println(element);
+            }
+            for (String element : cu.BSITminorSubs1stSem) {
+                System.out.println(element);
+            }
             System.out.println("Total tuition: "+ tc.getBSITtuition());
             System.out.print("Scholarship discount (as digits, type 0 if none): ");
                 double discount = handler.nextDouble();
@@ -358,7 +418,13 @@ int last6digits;
         }
         //BSIT 2nd sem
         else if(course.equalsIgnoreCase("BSIT") && sem.equalsIgnoreCase("2nd")){
-            System.out.println("Subjects:\n"+ cu.BSITmajorSubs2ndSem + "\n" + cu.BSITminorSubs2ndSem);
+            System.out.println("[Subjects]");
+            for (String element : cu.BSITmajorSubs2ndSem) {
+                System.out.println(element);
+            }
+            for (String element : cu.BSITminorSubs2ndSem) {
+                System.out.println(element);
+            }
             System.out.println("Total tuition: "+ tc.getBSITtuition());
             System.out.print("Scholarship discount (as digits, type 0 if none): ");
                 double discount = handler.nextDouble();
@@ -385,7 +451,13 @@ int last6digits;
         }
         //BMMA 1st sem
         else if(course.equalsIgnoreCase("BMMA") && sem.equalsIgnoreCase("1st")){
-            System.out.println("Subjects:\n"+ cu.BMMAmajorSubs1stSem + "\n" + cu.BMMAminorSubs1stSem);
+            System.out.println("[Subjects]");
+            for (String element : cu.BMMAmajorSubs1stSem) {
+                System.out.println(element);
+            }
+            for (String element : cu.BMMAminorSubs1stSem) {
+                System.out.println(element);
+            }
             System.out.println("Total tuition: "+ tc.getBMMAtuition());
             System.out.print("Scholarship discount (as digits, type 0 if none): ");
                 double discount = handler.nextDouble();
@@ -412,7 +484,14 @@ int last6digits;
         }
         //BMMA 2nd sem
         else if(course.equalsIgnoreCase("BMMA") && sem.equalsIgnoreCase("2nd")){
-            System.out.println("Subjects:\n"+ cu.BMMAmajorSubs2ndSem + "\n" + cu.BMMAminorSubs2ndSem);
+            
+            System.out.println("[Subjects]");
+            for (String element : cu.BMMAmajorSubs2ndSem) {
+                System.out.println(element);
+            }
+            for (String element : cu.BMMAminorSubs2ndSem) {
+                System.out.println(element);
+            }
             System.out.println("Total tuition: "+ tc.getBMMAtuition());
             System.out.print("Scholarship discount (as digits, type 0 if none): ");
                 double discount = handler.nextDouble();
@@ -439,7 +518,14 @@ int last6digits;
         }
         //BSTM 1st sem
         else if(course.equalsIgnoreCase("BSTM") && sem.equalsIgnoreCase("1st")){
-            System.out.println("Subjects:\n"+ cu.BSTMmajorSubs1stSem + "\n" + cu.BSTMminorSubs1stSem);
+            
+            System.out.println("[Subjects]");
+            for (String element : cu.BSTMmajorSubs1stSem) {
+                System.out.println(element);
+            }
+            for (String element : cu.BSTMminorSubs1stSem) {
+                System.out.println(element);
+            }
             System.out.println("Total tuition: "+ tc.getBSTMtuition());
             System.out.print("Scholarship discount (as digits, type 0 if none): ");
                 double discount = handler.nextDouble();
@@ -466,7 +552,14 @@ int last6digits;
         }
         //BSTM 2nd sem
         else if(course.equalsIgnoreCase("BSTM") && sem.equalsIgnoreCase("2nd")){
-            System.out.println("Subjects:\n"+ cu.BSTMmajorSubs2ndSem + "\n" + cu.BSTMminorSubs2ndSem);
+            
+            System.out.println("[Subjects]");
+            for (String element : cu.BSTMmajorSubs2ndSem) {
+                System.out.println(element);
+            }
+            for (String element : cu.BSTMminorSubs2ndSem) {
+                System.out.println(element);
+            }
             System.out.println("Total tuition: "+ tc.getBSTMtuition());
             System.out.print("Scholarship discount (as digits, type 0 if none): ");
                 double discount = handler.nextDouble();
@@ -493,7 +586,14 @@ int last6digits;
         }
         //BSBA 1st sem
         else if(course.equalsIgnoreCase("BSBA") && sem.equalsIgnoreCase("1st")){
-            System.out.println("Subjects:\n"+ cu.BSBAmajorSubs1stSem + "\n" + cu.BSBAminorSubs1stSem);
+            
+            System.out.println("[Subjects]");
+            for (String element : cu.BSBAmajorSubs1stSem) {
+                System.out.println(element);
+            }
+            for (String element : cu.BSBAminorSubs1stSem) {
+                System.out.println(element);
+            }
             System.out.println("Total tuition: "+ tc.getBSBAtuition());
             System.out.print("Scholarship discount (as digits, type 0 if none): ");
                 double discount = handler.nextDouble();
@@ -520,7 +620,14 @@ int last6digits;
         }
         //BSBA 2nd sem
         else if(course.equalsIgnoreCase("BSBA") && sem.equalsIgnoreCase("2nd")){
-            System.out.println("Subjects:\n"+ cu.BSBAmajorSubs2ndSem + "\n" + cu.BSBAminorSubs2ndSem);
+            
+            System.out.println("[Subjects]");
+            for (String element : cu.BSBAmajorSubs2ndSem) {
+                System.out.println(element);
+            }
+            for (String element : cu.BSBAminorSubs2ndSem) {
+                System.out.println(element);
+            }
             System.out.println("Total tuition: "+ tc.getBSBAtuition());
             System.out.print("Scholarship discount (as digits, type 0 if none): ");
                 double discount = handler.nextDouble();
