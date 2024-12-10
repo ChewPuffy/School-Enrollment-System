@@ -30,7 +30,7 @@ int last6digits;
     public void Menu(){
         Scanner handler = new Scanner(System.in);
         System.out.println("[===================================================]"); 
-        System.out.println("[                 Enrollment System                 ]");
+        System.out.println("[            Enrollment Simulation System           ]");
         System.out.println("[===================================================]");
         System.out.print("Please choose a student record management action:\n[1] Enrollment\n[2] Update Student's Record\n[3] View Student Record\n[4] Exit program\n\nEnter your choice (1 / 2 / 3):");
         runningtask=handler.nextInt();
